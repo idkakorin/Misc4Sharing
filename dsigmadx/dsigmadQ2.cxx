@@ -186,7 +186,7 @@ d3XSecMK_dWQ2CosTheta_E::d3XSecMK_dWQ2CosTheta_E(
   double sqrt_s = TMath::Sqrt(s);
   double Enu_CM = (s - M*M)/2/sqrt_s;
   double B = (Q2 + ml2)/2/Enu_CM;
-  double W = s + ml2 - sqrt_s*(B + ml2/B);
+  double W = TMath::Sqrt(s + ml2 - sqrt_s*(B + ml2/B));
   fWcut = TMath::Min(W,Wcut);
     
 }
