@@ -200,7 +200,7 @@ double d3XSecMK_dWQ2CosTheta_E::DoEval(const double * xin) const
   
   fInteraction->KinePtr()->SetKV(kKVphip, fphi);
   
-  double xsec = fModel->XSec(fInteraction, kPSWQ2ctpphipfE)*2*(Wl.max-Wl.min)*(Q2l.max-Q2l.min)*2;
+  double xsec = fModel->XSec(fInteraction, kPSWQ2ctpphipfE)*(Wl.max-Wl.min)*(Q2l.max-Q2l.min)*2;
   return xsec/(1E-38 * units::cm2);
 }
 ROOT::Math::IBaseFunctionMultiDim *
